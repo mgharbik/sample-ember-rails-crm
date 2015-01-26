@@ -7,3 +7,7 @@ App.Lead = DS.Model.extend
   notes: DS.attr('string')
   createdAt: DS.attr('date')  
   updatedAt: DS.attr('date')
+
+  fullName: ( ->
+  	@get('firstName') + ' ' + @get('lastName')
+  ).property('firstName', 'lastName')
