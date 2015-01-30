@@ -14,3 +14,6 @@ App.Lead = DS.Model.extend
 
 App.Lead.reopenClass
   STATUS: ['new', 'in progress', 'closed', 'bad']
+
+  valid: (fields) ->
+    fields.firstName and fields.lastName
